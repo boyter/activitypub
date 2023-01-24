@@ -1,4 +1,4 @@
-# ActivityPub -> Announce -> Post
+# Announce -> Post
 
 What follows is how a boost/announce/retweet works in Mastodon and any other system that implements against ActivityPub.
 
