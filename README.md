@@ -13,6 +13,7 @@
            |_|    \__,_|_.__/          
 ```
 
-Sequence diagrams of how ActivityPub works and how to implement against it will be stored here.
+Sequence diagrams of how ActivityPub/Webfinger works and how to implement against it will be stored here.
 
  - [Announce Post](announce-post.md)
+ - [Create Post](create-post.md)
