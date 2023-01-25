@@ -18,7 +18,7 @@ Sequence diagrams of how ActivityPub/Webfinger works and how to implement agains
  - [Announce Post](announce-post.md)
  - [Create Post](create-post.md)
  - [Move Post](move-post.md)
- - [Move Post](delete-post.md)
+ - [Delete Post](delete-post.md)
 
 PR's are encouraged!
 
