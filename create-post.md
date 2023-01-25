@@ -54,3 +54,5 @@ curl --location --request GET 'https://some.instance/users/someone' \
 ```
 
 The return from the above will contain a field inbox, which in the case of a mastodon system looks like the following `"inbox": "https://some.instance/users/someone/inbox"`. It is this URL that the create must be sent to as a POST.
+
+While technically not a requirement most instances require that any incoming message is signed using the users private key to ensure the message was not forged. This signature is either set via the field `signature` in the json document sent or via the `Signature` HTTP header.
