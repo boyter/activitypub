@@ -17,3 +17,5 @@ Sequence diagrams of how ActivityPub/Webfinger works and how to implement agains
 
  - [Announce Post](announce-post.md)
  - [Create Post](create-post.md)
+
+PR's are encouraged!
