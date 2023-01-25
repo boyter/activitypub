@@ -20,3 +20,21 @@ Sequence diagrams of how ActivityPub/Webfinger works and how to implement agains
  - [Move Post](move-post.md)
 
 PR's are encouraged!
+
+
+The following are good to look through,
+
+https://www.w3.org/TR/activitypub/
+https://docs.joinmastodon.org/spec/activitypub/
+https://activitypub.rocks/
+
+The following are implementations in a few different languages,
+
+https://github.com/jointakahe/takahe Python
+https://humungus.tedunangst.com/r/honk Go
+https://blog.joinmastodon.org/2018/06/how-to-implement-a-basic-activitypub-server/ JavaScript
+https://github.com/benbrown/shuttlecraft JavaScript
+
+Some specific behaviors are covered well here.
+
+https://docs.gotosocial.org/en/latest/federation/behaviors/outbox/
