@@ -11,37 +11,6 @@ In the case of follower instances, they receive the announce, then fetch the con
 
 In the case of the owner, they take the announce and increment their boost count.
 
-```
-┌────────────┐ ┌────────────┐ ┌───────────────┐ ┌────────────────┐        
-│    User    │ │  Instance  │ │Remote Instance│ │ Owner Instance │        
-└────────────┘ └────────────┘ └───────────────┘ └────────────────┘        
-      │              │               │                  │                 
-      │              │               │                  │                 
-      │              │               │                  │                 
-      │───Announce──▶│               │                  │                 
-      │              │               │                  │                 
-      │              │───────┐       │                  │                 
-      │              │       │       │                  │                 
-      │              │Fetch Followers│                  │                 
-      │              │       │       │                  │                 
-      │              │◀──────┘       │                  │                 
-      │              │               │                  │                 
-      │              │  Announce to  │                  │                 
-      │              │──Follower(s)─▶│───Fetch Outbox──▶│                 
-      │              │               │                  │                 
-      │              │               │◀─Update Content──│                 
-      │              │               │                  │                 
-      │              │               │                  │                 
-      │              │───────Announce to Owner─────────▶│                 
-      │              │               │                  │ ───────┐        
-      │              │               │                  │        │        
-      │              │               │                  │ Increment Count 
-      │              │               │                  │        │        
-      │              │               │                  │ ◀──────┘        
-      │              │               │                  │                 
-      │              │               │                  │                 
-```
-
 
 ```mermaid
 sequenceDiagram
