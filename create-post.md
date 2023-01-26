@@ -21,25 +21,6 @@ When a post is created by a user the instance performs the following actions.
 
 For local instances the decision is up to the instance.
 
-```
-┌────────────┐ ┌────────────┐ ┌───────────────┐
-│    User    │ │  Instance  │ │Remote Instance│
-└────────────┘ └────────────┘ └───────────────┘
-      │              │               │         
-      │              │               │         
-      │              │               │         
-      │────Create───▶│───Webfinger──▶│         
-      │              │               │         
-      │              │               │         
-      │              │─────User─────▶│         
-      │              │               │         
-      │              │               │         
-      │              │───Create to ─▶│         
-      │              │     Inbox     │         
-      │              │               │         
-      │              │               │         
-```
-
 ```mermaid
 sequenceDiagram
     actor User
