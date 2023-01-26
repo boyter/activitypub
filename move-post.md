@@ -38,3 +38,17 @@ Note that the move must be signed using the private key of the user before being
       │              │──Follower(s)─▶│
       │              │               │
 ```
+
+
+```mermaid
+sequenceDiagram
+    actor User
+    User->>Instance Old: Move
+    Instance Old--)Instance Old: Fetch Followers
+    loop Every Follower
+      Instance Old--)Remote Instance: Move
+      Remote Instance--)Instance Old: Unfollow
+      Remote Instance--)Instance New: Follow
+    end
+```
+
