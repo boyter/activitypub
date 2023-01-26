@@ -15,10 +15,10 @@
 
 Sequence diagrams of how ActivityPub/Webfinger works and how to implement against it will be stored here.
 
- - [Announce Post](announce-post.md)
- - [Create Post](create-post.md)
- - [Move Post](move-post.md)
- - [Delete Post](delete-post.md)
+ - [Announce Post](announce-post.md) - Boost/Retweet/Share
+ - [Create Post](create-post.md) - Toot/Tweet/Post
+ - [Move Post](move-post.md) - User Migration
+ - [Delete Post](delete-post.md) - Toot/Tweet/Post Deletion
 
 PR's are encouraged!
 
