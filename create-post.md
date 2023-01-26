@@ -44,9 +44,9 @@ For local instances the decision is up to the instance.
 sequenceDiagram
     actor User
     User->>Instance: Create Post
-    Instance-->>Remote Instance: Webfinger
-    Instance-->>Remote Instance: User
-    Instance-)Remote Instance: Create Post
+    Instance--)Remote Instance: Webfinger
+    Instance--)Remote Instance: User
+    Instance--)Remote Instance: Create Post
 ```
 
 Generally the results from webfinger and the user probes are cached to avoid hitting the remote instance again. This information should be possible to cache forever.
