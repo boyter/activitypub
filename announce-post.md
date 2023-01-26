@@ -50,7 +50,7 @@ sequenceDiagram
     Instance--)Instance: Fetch Followers
     loop Every Follower
       Instance--)Remote Instance: Announce to follower
-      Remote Instance: Fetch Content
+      Remote Instance--)Owner Instance: Fetch Content
     end
     Instance--)Owner Instance: Accounce
     Owner Instance--)Owner Instance: Increment Count
