@@ -42,6 +42,7 @@ For local instances the decision is up to the instance.
 
 ```mermaid
 sequenceDiagram
+    actor User
     User->>Instance: Create Post
     Instance-->>Remote Instance: Webfinger
     Instance-->>Remote Instance: User
