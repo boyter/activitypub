@@ -56,3 +56,44 @@ curl --location --request GET 'https://some.instance/users/someone' \
 The return from the above will contain a field inbox, which in the case of a mastodon system looks like the following `"inbox": "https://some.instance/users/someone/inbox"`. It is this URL that the create must be sent to as a POST.
 
 While technically not a requirement most instances require that any incoming message is signed using the users private key to ensure the message was not forged. This signature is either set via the field `signature` in the json document sent or via the `Signature` HTTP header.
+
+## Bare Minimum
+
+The bare minimum you need to send a message is the following for any instance that verifies the signature.
+
+ - Public domain accessable by the internet at large, or the private key for a public domain account.
+ - Webfinger implementation 
+ - User endpoint implementation
+
+With the above in place you should be able to create a message, sign it, send it and have the message verified by the remote instance.
+
+With no verification in place it should be as simple as crafting the appropiate JSON object and then POST at the correct URL.
+
+The below will send a message to the inbox of https://mastinator.com/u/testinbox which you can visit.
+
+Note that the `ShouldBeUniqueDuplicatesIgnoredTillDeleted` must be unique per message, otherwise it will be ignored. The content of the below message will be `Hello!`.
+
+```bash
+curl --location --request POST 'https://mastinator.com/u/testinbox/inbox' \
+     --header 'Content-Type: application/json' \
+     --data-raw '{
+      "@context": "https://www.w3.org/ns/activitystreams",
+      "actor": "https://mastinator.com/",
+      "id": "ShouldBeUniqueDuplicatesIgnoredTillDeleted",
+      "object": {
+        "content": "Hello!",
+        "conversation": "empty",
+        "id": "ShouldBeUniqueDuplicatesIgnoredTillDeleted",
+        "published": "2022-12-20T06:03:41Z",
+        "summary": "",
+        "to": "https://www.w3.org/ns/activitystreams#Public",
+        "type": "Note",
+        "url": "https://mastinator.com/"
+      },
+      "published": "2022-12-20T06:03:41Z",
+      "to": "https://www.w3.org/ns/activitystreams#Public",
+      "type": "Create"
+     }'
+```
+
+
