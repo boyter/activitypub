@@ -19,26 +19,6 @@ An example announce appears like the below. The user at old.instance wants to in
 
 Note that the move must be signed using the private key of the user before being sent to the followers allowing verification that the request was sent by that account. This must be enfoced to avoid abuse.
 
-```
-┌────────────┐ ┌────────────┐ ┌───────────────┐
-│    User    │ │  Instance  │ │Remote Instance│
-└────────────┘ └────────────┘ └───────────────┘
-      │              │               │
-      │              │               │
-      │              │               │
-      │─────Move────▶│               │
-      │              │               │
-      │              │───────┐       │
-      │              │       │       │
-      │              │Fetch Followers│
-      │              │       │       │
-      │              │◀──────┘       │
-      │              │               │
-      │              │   Move to     │
-      │              │──Follower(s)─▶│
-      │              │               │
-```
-
 
 ```mermaid
 sequenceDiagram
