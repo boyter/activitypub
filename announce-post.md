@@ -42,6 +42,21 @@ In the case of the owner, they take the announce and increment their boost count
       │              │               │                  │                 
 ```
 
+
+```mermaid
+sequenceDiagram
+    actor User
+    User->>Instance: Accounce
+    Instance--)Instance: Fetch Followers
+    loop Every Follower
+      Instance--)Remote Instance: Announce to follower
+      Remote Instance: Fetch Content
+    end
+    Instance--)Owner Instance: Accounce
+    Owner Instance--)Owner Instance: Increment Count
+```
+
+
 An example announce appears like the below. Actor is whoever did the boost, cc is the user who's post is being boosted and object contains a link to the post itself. The below assumes the instance honk.boyter.org was boosting a post from another instance named some.instance in this case.
 
 ```json
