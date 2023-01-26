@@ -46,16 +46,16 @@ Webfinger can be done with a simple get request
 
 `https://some.instance/.well-known/webfinger?resource=acct:someone@some.instance`
 
-User can be fetched by finding the `rel` identified as `self` inside the `links` array. This can then be fetched using the usual headers, `application/activity+json` or `application/ld+json; profile="https://www.w3.org/ns/activitystreams`. However note that some instance types will work with `application/json` although this is not strictly correct.
+User can be fetched by finding the `rel` identified as `self` inside the `links` array. This can then be fetched using the usual headers, `application/activity+json` or `application/ld+json; profile="https://www.w3.org/ns/activitystreams"`. However note that some instance types will work with `application/json` although this is not strictly correct.
 
 ```
 curl --location --request GET 'https://some.instance/users/someone' \
---header 'Accept: application/ld+json; profile="https://www.w3.org/ns/activitystreams'
+--header 'Accept: application/ld+json; profile="https://www.w3.org/ns/activitystreams"'
 ```
 
 The return from the above will contain a field inbox, which in the case of a mastodon system looks like the following `"inbox": "https://some.instance/users/someone/inbox"`. It is this URL that the create must be sent to as a POST.
 
-While technically not a requirement most instances require that any incoming message is signed using the users private key to ensure the message was not forged. This signature is either set via the field `signature` in the json document sent or via the `Signature` HTTP header.
+While technically not a requirement most instances require that any incoming message is signed using the users private key to ensure the message was not forged. This signature is either set via the field `signature` in the json document sent or via the `Signature` HTTP header. Most fediverse platforms create HTTP signatures according to [draft-cavage-http-signatures-12](https://datatracker.ietf.org/doc/html/draft-cavage-http-signatures) specification, which differs significantly from the latest version of the standard.
 
 ## Bare Minimum
 
@@ -95,5 +95,3 @@ curl --location --request POST 'https://mastinator.com/u/testinbox/inbox' \
       "type": "Create"
      }'
 ```
-
-
