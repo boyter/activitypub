@@ -3,9 +3,9 @@
 Posts tend to be created with a few possible states before being distributed, in Mastodon and other systems.
 
  - Public. This will appear on the local timeline, and go to all followers of the user, and any @ mentions. Anyone can access this post via API.
- - Mentioned. This will only go to a direct @ mentions in the message itself, and not followers.
- - Followers. This will only go to followers, and not appear on the local timeline.
- - Unlisted this goes into everything, but should now allow boosts or other such actions.
+ - Mentioned. This will only go to a direct @ mentions in the message itself, and not followers. Such posts should only be accessable to signed requests for the person @ via API.
+ - Followers. This will only go to followers, and not appear on the local timeline. Such posts should only be accessable to signed requests by followers via API.
+ - Unlisted this goes into everything, but should not allow boosts or other such actions.
 
 takahe also has the following
 
