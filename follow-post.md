@@ -32,4 +32,8 @@ Example follow request to be POST'ed to a user we want to follow.
 }
 ```
 
+
+TODO - Example of follow accept here
+
+
 Technically there is no need to keep track of who an instance follows, as this information is retained by the remote instance. It is probably useful to retain for displaying to the user however.
