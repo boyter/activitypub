@@ -22,10 +22,8 @@ The goal is to create a collction that can be used by someone in a clean room en
  - [Move Post](move-post.md) - User Migration
  - [Delete Post](delete-post.md) - Toot/Tweet/Post Deletion
  - [Follow Post](follow-post.md) - Follow Account
-
-
-Webfinger is described quite well at the following https://webfinger.net/ and should be considered essential reading as it is used across the fediverse.
-
+ - [Webfinger](webfinger.md) - Webfinger
+ - [User](user.md) - Getting user details
 
 PR's are encouraged!
 
