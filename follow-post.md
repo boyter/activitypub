@@ -23,7 +23,7 @@ Example follow request to be POST'ed to a user we want to follow. Note that the 
    "@context": "https://www.w3.org/ns/activitystreams",
    "actor": "https://some.instance/u/followinguser",
    "id": "https://some.instance/u/followinguser/sub/someuniqueid",
-   "object": "locationofuserwewanttofollowinbox",
+   "object": "https://another.instance/u/userwewanttofollow",
    "published": "2006-01-02T15:04:05Z07:00",
    "to": "https://some.instance/u/%s/inbox",
    "type": "Follow"
