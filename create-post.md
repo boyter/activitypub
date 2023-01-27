@@ -26,7 +26,7 @@ sequenceDiagram
     actor User
     User->>Instance: Create Post
     Instance--)Remote Instance: Webfinger
-    Instance--)Remote Instance: User
+    Instance--)Remote Instance: User Details
     Instance--)Remote Instance: Create Post
 ```
 
