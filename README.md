@@ -15,7 +15,7 @@
 
 Sequence diagrams of how ActivityPub/Webfinger works and how to implement against it will be stored here. This is needed because the spec is vague and different instances implement things in different ways.
 
-The goal is to create a collction that can be used by someone in a clean room environment to implement an instance that could work against the fediverse.
+The goal is to create a collection that can be used by someone in a clean room environment to implement an instance that could work against the fediverse.
 
  - [Announce Post](announce-post.md) - Boost/Retweet/Share
  - [Create Post](create-post.md) - Toot/Tweet/Post
