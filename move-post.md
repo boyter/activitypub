@@ -24,7 +24,7 @@ Note that the move must be signed using the private key of the user before being
 sequenceDiagram
     actor User
     User->>Instance Old: Move
-    Instance Old--)Instance Old: Fetch Followers
+    Instance Old--)Instance Old: Fetch Following
     loop Every Follower
       Instance Old--)Remote Instance: Move
       Remote Instance--)Instance Old: Unfollow
