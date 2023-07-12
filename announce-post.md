@@ -15,13 +15,13 @@ In the case of the owner, they take the announce and increment their boost count
 ```mermaid
 sequenceDiagram
     actor User
-    User->>Instance: Accounce
+    User->>Instance: Announce
     Instance--)Instance: Fetch Following
     loop Every Follower
       Instance--)Remote Instance: Announce to follower
       Remote Instance--)Owner Instance: Fetch Content
     end
-    Instance--)Owner Instance: Accounce
+    Instance--)Owner Instance: Announce
     Owner Instance--)Owner Instance: Increment Count
 ```
 
