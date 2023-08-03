@@ -30,6 +30,6 @@ curl --location --request GET 'https://mastinator.com/u/someaccount' \
 --header 'Accept: application/ld+json; profile="https://www.w3.org/ns/activitystreams"
 ```
 
-For mastodon the accept headers of `application/activity+json`, `application/ld+json; profile="https://www.w3.org/ns/activitystreams` or `application/json` will work for the above call, but many instance types will reject the first two. It is safer to use one of the first two which are strictly speaking more correct anyway.
+For mastodon the accept headers of `application/activity+json`, `application/ld+json; profile="https://www.w3.org/ns/activitystreams` or `application/json` will work for the above call, but many instance types will reject the first two. It is safer to use the first one which strictly speaking is more correct anyway.
 
 Note that fetching the url without this header will usually result in a redirect to the HTML version of the users inbox, or return HTML directly.
